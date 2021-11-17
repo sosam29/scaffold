@@ -4,20 +4,20 @@ jobs:
   build:
     runs-on:ubuntu-latest
     steps:
-      -- uses: actions/checkout@v2
-      -- name: set up python 3.8
+      - uses: actions/checkout@v2
+      - name: set up python 3.8
          uses: actions/setup-python@v1
          with:
            python-version: 3.8
-       -- name: Install dependencies
+       - name: Install dependencies
           run: |
             make install
-       -- name: Lint the code with pylint
+       - name: Lint the code with pylint
           run: |
             make lint
-       -- name: Test with pytest
+       - name: Test with pytest
           run: | 
             make test
-       -- name: format code with Python black
+       - name: format code with Python black
           run: |
             make format
