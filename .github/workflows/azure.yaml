@@ -1,0 +1,20 @@
+name: Python application azure python 3.6
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: set up python 3.5.10
+      uses: actions/setup-python@v1
+      with:
+          python-version: 3.5.10
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint the code with pylint
+      run: |
+        make lint
+    - name: Test with pytest
+      run: | 
+        make test
