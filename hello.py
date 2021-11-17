@@ -3,4 +3,4 @@ def add(x, y):
 
 
 res = add(1, 2)
-print(f"adding 1, 2 results into {res}")
+print("adding 1, 2 results into {}".format(res))
